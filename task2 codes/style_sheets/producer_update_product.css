@@ -1,0 +1,174 @@
+/* =========================================
+   UPDATE PRODUCT PAGE
+   ========================================= */
+
+.my-bookings-wrap{
+max-width:1000px;
+margin:30px auto;
+padding:20px;
+background:var(--off-white);
+}
+
+.booking-list-panel{
+background:#fff;
+border:2px solid var(--box-border);
+border-radius:18px;
+box-shadow:0 12px 28px rgba(0,0,0,0.06);
+padding:30px;
+}
+
+
+/* FLEX LAYOUT */
+
+.update-container{
+display:flex;
+flex-wrap:wrap;
+gap:40px;
+margin-top:20px;
+}
+
+.form-col-left,
+.form-col-right{
+flex:1;
+min-width:300px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+
+/* HEADERS */
+
+h3{
+font-size:1.1rem;
+color:var(--text-dark);
+border-bottom:2px solid var(--box-border);
+padding-bottom:8px;
+}
+
+
+/* INPUTS */
+
+label{
+font-weight:800;
+color:var(--text-medium);
+font-size:0.95rem;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:12px;
+border:2px solid #ddd;
+border-radius:12px;
+font-size:1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+outline:none;
+border-color:var(--accent);
+}
+
+
+/* IMAGE PREVIEW */
+
+.product-preview{
+margin-top:10px;
+width:120px;
+border-radius:10px;
+border:2px solid var(--box-border);
+}
+
+
+/* ACTION BAR */
+
+.action-bar{
+margin-top:30px;
+padding-top:20px;
+border-top:1px solid #eee;
+
+display:flex;
+justify-content:flex-end;
+gap:15px;
+}
+
+
+/* BUTTONS */
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:12px 24px;
+border-radius:12px;
+border:none;
+cursor:pointer;
+
+background:var(--accent);
+color:#fff;
+font-weight:800;
+}
+
+.btn.danger{
+background:#c53030;
+}
+
+
+/* INFO BOX */
+
+.info-box{
+background:#e0f2fe;
+color:#0369a1;
+padding:15px;
+border-radius:12px;
+margin-bottom:20px;
+border:1px solid #bae6fd;
+}
+
+/* =========================================================
+   HERO TEXT ADJUSTMENTS FOR VIEW PRODUCTS PAGE
+   ========================================================= */
+
+/* Default hero text spacing adjustment */
+
+.hero.login-hero .hero-content h1{
+  margin-bottom: 0.2rem;
+}
+
+.hero.login-hero .hero-content p{
+  margin-top: 0;
+}
+.action-bar form{
+display:inline;
+}
+/* RESPONSIVE */
+
+@media(max-width:720px){
+
+.update-container{
+flex-direction:column;
+gap:30px;
+}
+
+.action-bar{
+flex-direction:column-reverse;
+}
+
+.btn{
+width:100%;
+}
+
+
+  .hero.login-hero .hero-content h1{
+  font-size: 1.8rem;
+}
+
+.hero.login-hero .hero-content p{
+  font-size: 0.95rem;
+}
+
+}

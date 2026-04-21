@@ -1,0 +1,316 @@
+/* =========================================================
+   VIEW PRODUCTS PAGE CSS
+   Notes:
+   - Reuses the same visual approach as the old my_bookings.css
+   - Nav styling stays in root_nav.css
+   - This file styles only the content below the hero
+   - Uses Flexbox for layout
+   ========================================================= */
+
+/* Main wrapper for page content */
+.products-wrap{
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  background: var(--off-white);
+}
+
+/* Flash messages */
+.msg{
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.msg.ok{
+  background: #e8fff5;
+  border: 1px solid #2f855a;
+}
+
+.msg.err{
+  background: #fff0f0;
+  border: 1px solid #c53030;
+}
+
+/* =========================================================
+   TOP OPTION CARDS
+   ========================================================= */
+
+.product-option-list{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.product-option-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+
+  padding: 18px;
+  background: #fff;
+  border-radius: 14px;
+  border: 2px solid var(--box-border);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.product-option-info{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.product-option-title{
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--text-medium);
+}
+
+.product-option-desc{
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.product-option-actions{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* Category form */
+.category-form{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.category-form select{
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  font: inherit;
+  min-width: 180px;
+}
+
+/* =========================================================
+   RESULT HEADING
+   ========================================================= */
+
+.results-heading-wrap{
+  margin: 10px 0 18px;
+}
+
+.results-heading{
+  margin: 0;
+  color: var(--text-medium);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+/* =========================================================
+   PRODUCT RESULT CARDS
+   ========================================================= */
+
+.product-list{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.product-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+
+  padding: 18px;
+  background: #fff;
+  border-radius: 14px;
+  border: 2px solid var(--box-border);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.product-info{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-id{
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--text-medium);
+}
+
+.product-name{
+  font-size: 1rem;
+  font-weight: 700;
+  color: #134e4a;
+}
+
+.product-meta{
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.product-description{
+  margin-top: 4px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  opacity: 0.9;
+  max-width: 650px;
+}
+
+.product-actions{
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.product-image{
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid var(--box-border);
+  background: #fff;
+}
+
+.product-action-buttons{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  font: inherit;
+}
+
+.btn.secondary{
+  background: #6b7280;
+}
+
+.btn.danger{
+  background: #c53030;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.no-products{
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  border: 2px dashed var(--box-border);
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* =========================================================
+   SCREEN READER ONLY LABEL
+   ========================================================= */
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =========================================================
+   HERO TEXT ADJUSTMENTS FOR VIEW PRODUCTS PAGE
+   ========================================================= */
+
+/* Default hero text spacing adjustment */
+
+.hero.login-hero .hero-content h1{
+  margin-bottom: 0.2rem;
+}
+
+.hero.login-hero .hero-content p{
+  margin-top: 0;
+}
+
+/* =========================================================
+   MOBILE LAYOUT
+   ========================================================= */
+
+@media (max-width: 720px){
+
+  .product-option-card,
+  .product-card{
+    flex-direction: column;
+  }
+
+  .product-option-actions,
+  .product-actions,
+  .category-form,
+  .product-action-buttons{
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .product-image{
+    width: 100px;
+    height: 100px;
+  }
+
+  .category-form select{
+    min-width: 100%;
+  }
+
+  .hero.login-hero .hero-content h1{
+  font-size: 1.8rem;
+}
+
+.hero.login-hero .hero-content p{
+  font-size: 0.95rem;
+}
+
+}
+@media (max-width:480px){
+
+.hero.login-hero .hero-content h1{
+  font-size: 1.4rem;
+  margin-bottom: 0.1rem;
+}
+
+.hero.login-hero .hero-content p{
+  font-size: 0.85rem;
+  margin-top: 0;
+}
+
+}

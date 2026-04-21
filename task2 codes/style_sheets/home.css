@@ -1,0 +1,222 @@
+
+
+
+/*  BRAND COLOURS & GLOBAL STYLES  */
+
+
+:root {
+    --brand-olive: #c9d28f;
+    --brand-olive-light: #d4df9a;
+    --brand-yellow-green: #e7eeb9;
+
+    --brand-dark: #1d1d1d;
+    --brand-grey: #2a2a2a;
+
+    --off-white: #f9f9f4;
+
+    --font-heading: system-ui, Arial;
+    --font-body: system-ui, Arial;
+
+    --box-bg: #ffffff;
+    --box-border: #e0e0d4;
+}
+
+/* Remove margin default */
+body {
+    margin: 0;
+    font-family: var(--font-body);
+}
+
+
+
+/*  HERO SLIDESHOW                                          */
+
+
+.hero-slideshow {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    padding-top: 75px; /* keeps nav from overlapping hero */
+}
+
+/* slideshow images */
+.slides {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    animation: fadeCycle 16s infinite;
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 4s; }
+.slide:nth-child(3) { animation-delay: 8s; }
+.slide:nth-child(4) { animation-delay: 12s; }
+
+@keyframes fadeCycle {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    25% { opacity: 1; }
+    35% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 10;
+    color: white;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-family: var(--font-heading);
+}
+
+/* search button */
+.search-products-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: var(--brand-olive-light);
+    color: var(--brand-dark);
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.search-products-btn:hover {
+    background: var(--brand-olive);
+}
+
+
+
+/* =========================================================
+LOYALTY PROGRAM SECTION 
+========================================================= */
+
+.loyalty-banner {
+    width: 100%;
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+    background: var(--off-white);
+}
+
+.loyalty-inner {
+    background: #f1f1ed; /* Softer grey for a premium look */
+    width: 100%;
+    max-width: 1100px;
+    padding: 55px 40px;
+    text-align: center;
+    border-radius: 22px;
+
+    /* Soft, clean depth */
+    box-shadow:
+        0 14px 34px rgba(0,0,0,0.08),
+        inset 0 0 0 1px rgba(0,0,0,0.06);
+}
+
+/* Icon */
+.loyalty-icon {
+    width: 70px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+}
+
+.loyalty-inner h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 2vw + 0.8rem, 2.2rem);
+    color: var(--brand-dark);
+    margin: 0 0 14px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.loyalty-subtext {
+    font-family: var(--font-body);
+    color: var(--brand-grey);
+    margin: 0 auto 28px;
+    max-width: 650px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Benefits list */
+.loyalty-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 35px;
+    font-size: 1rem;
+    color: var(--brand-dark);
+    max-width: 420px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.loyalty-benefits li {
+    margin: 10px 0;
+    padding-left: 6px;
+}
+
+/* Buttons row */
+.loyalty-btn-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+/* Base button style */
+.loyalty-btn {
+    padding: 14px 40px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+/* JOIN button */
+.loyalty-btn.join {
+    background: var(--brand-olive-light);
+    color: var(--brand-dark);
+    border-color: var(--brand-olive);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+}
+
+.loyalty-btn.join:hover {
+    background: var(--brand-olive);
+}
+
+/* LOGIN button */
+.loyalty-btn.login {
+    background: white;
+    color: var(--brand-dark);
+    border-color: var(--brand-olive);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+}
+
+.loyalty-btn.login:hover {
+    background: var(--brand-olive);
+    color: var(--brand-dark);
+}
+

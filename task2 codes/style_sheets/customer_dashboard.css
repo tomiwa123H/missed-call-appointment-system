@@ -1,0 +1,179 @@
+/*  SIDEBAR CONTAINER */
+.sidebar {
+    position: fixed;
+    top: 80px; /* below navbar */
+    left: 0;
+    width: 260px;
+    height: calc(100vh - 80px);
+    background: linear-gradient(#f7f7f1, #e6e6dd);
+    border-right: 2px solid #cfcfcf;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    padding: 30px 25px;
+    transition: transform 0.3s ease;
+    z-index: 900;
+}
+
+.sidebar:not(.active) {
+    transform: translateX(-300px);
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* OPEN BUTTON */
+.open-btn {
+    position: fixed;
+    top: 90px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 950;
+}
+
+/*  MENU BUTTONS */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 60px;
+}
+
+/* The menu buttons from your screenshot */
+.menu-btn {
+    width: 100%;
+     background: #dddddd;           
+    border: 2px solid #000000;     
+    padding: 16px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;   
+    text-align: center;
+    cursor: pointer;
+    color: #1d1d1d;
+    transition: 0.25s ease;
+}
+
+
+/* Hover turns green */
+.menu-btn:hover,
+.menu-btn.active {
+    background: #c6d083;           
+    border-color: #c6d083;         
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+.menu-btn:hover,
+.menu-btn.active {
+    background: #b8c870;
+    transform: translateY(-2px);
+}
+
+/*  LOGOUT BUTTON */
+.logout-btn {
+    width: 100%;
+    background: #c6d083;
+    border: none;
+    padding: 16px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    margin-top: 60px;   
+    cursor: pointer;
+    color: #1d1d1d;
+    transition: 0.25s ease;
+}
+
+.logout-btn:hover {
+    background: #b8c870;
+    transform: translateY(-2px);
+}
+
+
+
+/* ✅ DASHBOARD BACKGROUND */
+/* ✅ DASHBOARD HEADER (WELCOME TEXT) */
+.dashboard-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+
+/* ✅ DASHBOARD AREA */
+.dashboard-container {
+    background: #d9d9d5;
+    min-height: 100vh;
+    padding-left: 320px;      /* space for sidebar */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ✅ EXACT 2x2 GRID (MATCHES IMAGE) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 320px);
+    grid-template-rows: repeat(2, 180px);
+    gap: 40px 60px;
+    margin-top: 40px;
+}
+
+
+/* ✅ CARD STYLE — OLIVE, ROUNDED, CENTERED */
+.card {
+    width: 300px;
+    height: 180px;
+    background: #c6d083;
+    border-radius: 20px;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* ✅ ensures text centered */
+
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.2);
+}
+
+/* ✅ Hover Effect (slight lift) */
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* ✅ CARD TITLE */
+.card h3 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ✅ BIG NUMBERS — EXACT MATCH */
+.card-number {
+    font-size: 52px;
+    font-weight: 900;
+    color: #234300;       /* dark green */
+    margin-top: 5px;
+}
