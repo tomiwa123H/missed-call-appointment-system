@@ -1,0 +1,104 @@
+
+/* FULL HERO CSS — WITH SLIDESHOW IMPLEMENTED    */
+
+/* Slideshow wrapper */
+.hero-slideshow {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    padding-top: 1px;
+}
+
+/* Slideshow images */
+.slides {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    animation-name: fadeCycle;
+    animation-duration: 16s; /* 4 slides x 4 seconds */
+    animation-iteration-count: infinite;
+}
+
+/* Delay each slide for timing */
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 5s; }
+.slide:nth-child(3) { animation-delay: 10s; }
+.slide:nth-child(4) { animation-delay: 15s; }
+
+/* Fade animation */
+@keyframes fadeCycle {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    25% { opacity: 1; }
+    35% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Overlay content */
+.hero-slideshow .hero-content {
+    position: absolute;
+    z-index: 10;
+    color: white;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Text styling */
+.hero-slideshow .hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.5);
+}
+
+.hero-slideshow .hero-content p {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.5);
+}
+
+/* Cookie + Stats cards */
+.hero-cards-wrapper {
+    margin-top: 25px;
+}
+
+#stats-container,
+#cookie-banner {
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+/* Buttons */
+.cookie-buttons button {
+    margin: 5px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero-slideshow {
+        height: 55vh;
+        padding-top: 60px; /* smaller nav on mobile */
+    }
+
+    .hero-slideshow .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-slideshow .hero-content p {
+        font-size: 1.1rem;
+    }
+}

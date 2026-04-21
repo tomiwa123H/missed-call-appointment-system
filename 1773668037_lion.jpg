@@ -1,0 +1,120 @@
+/*
+============================================
+Add Product Form – DASHBOARD MATCHED
+============================================
+*/
+
+/* Page backdrop – same as dashboard */
+.form-section{
+    max-width:540px;
+    margin:4rem auto;
+    padding:2rem;
+    background:#c6d083;                 /* ✅ same olive as dashboard cards */
+    border-radius:20px;                  /* ✅ same rounding */
+    box-shadow:0 6px 14px rgba(0,0,0,0.2);
+}
+
+/* Heading style – matches dashboard header */
+.form-section h1{
+    text-align:center;
+    margin-bottom:1.8rem;
+    font-size:1.6rem;
+    font-weight:700;
+    color:#1d1d1d;
+}
+
+/* Form layout */
+.product-form{
+    display:flex;
+    flex-direction:column;
+    gap:0.9rem;
+}
+
+/* Labels */
+.product-form label{
+    font-weight:600;
+    color:#1d1d1d;
+}
+
+/* Inputs & textarea */
+.product-form input,
+.product-form textarea{
+    padding:0.65rem;
+    border:1px solid #999;
+    border-radius:8px;
+    font-family:inherit;
+    font-size:0.95rem;
+}
+
+/* Textarea */
+.product-form textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+/* Submit button – matches dashboard buttons */
+.product-form button{
+    margin-top:1.2rem;
+    padding:0.8rem;
+    background:#b8c870;                 /* ✅ same hover green */
+    color:#000;
+    border:none;
+    border-radius:30px;                 /* ✅ pill shape like dashboard */
+    font-weight:700;
+    cursor:pointer;
+    transition:0.25s ease;
+}
+
+.product-form button:hover{
+    transform:translateY(-2px);
+    background:#aeba5f;
+}
+
+/*
+--------------------------------------------
+Flash messages – subtle & consistent
+--------------------------------------------
+*/
+.flash-message{
+    margin-bottom:1rem;
+    padding:0.8rem;
+    text-align:center;
+    border-radius:12px;
+    font-weight:600;
+}
+
+.flash-message.ok{
+    background:#dff5e1;
+    color:#1b5e20;
+}
+
+.flash-message.err{
+    background:#fde2e2;
+    color:#7f1d1d;
+}
+
+/*
+--------------------------------------------
+Post‑add options (links)
+--------------------------------------------
+*/
+.post-add-options{
+    text-align:center;
+    margin-bottom:1.5rem;
+}
+
+.btn{
+    display:inline-block;
+    margin:0.4rem;
+    padding:0.6rem 1.2rem;
+    background:#b8c870;
+    color:#000;
+    border-radius:30px;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.btn-secondary{
+    background:#777;
+    color:white;
+}

@@ -1,0 +1,78 @@
+/* ---- Page background ---- */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #d9d9d9; /* light grey */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---- shared auth wrapper ---- */
+.auth-box {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+/* ---- headings ---- */
+.auth-box .auth-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #000;
+}
+
+.auth-box .auth-subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* ---- labels ---- */
+.auth-box label {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* ---- inputs ---- */
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  background: #ffffff;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+/* ---- submit buttons ---- */
+.auth-box .auth-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #c4cd68;
+  color: #fff;
+  cursor: pointer;
+}
+
+.auth-box .auth-btn:hover {
+  background-color: #b3bc5e;
+}
+
+/* ---- small links (login/register/forgot) ---- */
+.auth-box .auth-small-link {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 20px;
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+}

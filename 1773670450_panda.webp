@@ -1,0 +1,116 @@
+/* ============================================
+   VISITOR STATS CONTAINER
+============================================ */
+/* Utility class to hide elements securely */
+.hidden {
+    display: none !important;
+}
+
+#stats-container {
+    background: var(--box-bg);
+    border: 2px solid var(--box-border);
+    color: var(--text-medium);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    max-width: 320px;
+    margin: 2rem auto;
+    font-family: var(--font-body);
+    text-align: center;
+}
+
+#stats-container h3 {
+    font-family: var(--font-heading);
+    color: var(--bg-dark);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+#stats-container p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* Make the specific dynamic numbers stand out */
+#stats-container span {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+
+/* ============================================
+   GDPR COOKIE BANNER
+============================================ */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-dark); /* Using your dark purple */
+    color: var(--text-light);         /* Using your light text */
+    padding: clamp(1rem, 3vw, 1.5rem) 2rem;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 25000;                   /* Ensured it sits above your access-panel (15000) */
+    font-family: var(--font-body);
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
+}
+
+.cookie-banner p {
+    margin: 0 0 1rem 0;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.4;
+}
+
+.cookie-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cookie-buttons .btn {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cookie-buttons .btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Accept Button using your Pink Accent */
+.btn-accept {
+    background-color: var(--accent);
+    color: var(--off-white);
+}
+
+.btn-accept:hover {
+    background-color: #c91aa8; /* Slightly darker pink for hover */
+}
+
+/* Decline Button using your Complementary Teal */
+.btn-decline {
+    background-color: var(--accent-compl);
+    color: var(--off-white);
+}
+
+.btn-decline:hover {
+    background-color: #0f9688; /* Slightly darker teal for hover */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 480px) {
+    .cookie-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .cookie-buttons .btn {
+        width: 100%;
+    }
+}

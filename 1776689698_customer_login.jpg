@@ -1,0 +1,175 @@
+/* =========================================================
+   BASKET PAGE
+   ========================================================= */
+
+.basket-wrap{
+max-width:1100px;
+margin:30px auto;
+padding:20px;
+background:var(--off-white);
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+
+.product-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+justify-items:center;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
+
+.product-card{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+gap:12px;
+
+width:100%;
+max-width:240px;
+
+padding:18px;
+background:#fff;
+
+border-radius:14px;
+border:2px solid var(--box-border);
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+}
+
+
+/* =========================================================
+   PRODUCT INFO
+   ========================================================= */
+
+.product-info{
+display:flex;
+flex-direction:column;
+gap:6px;
+}
+
+.product-name{
+font-weight:800;
+font-size:1.1rem;
+color:var(--text-medium);
+}
+
+.product-meta{
+font-size:0.95rem;
+opacity:0.85;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+   ========================================================= */
+
+.product-image{
+width:140px;
+height:140px;
+object-fit:cover;
+
+border-radius:10px;
+border:2px solid var(--box-border);
+}
+
+
+/* =========================================================
+   QUANTITY INPUT
+   ========================================================= */
+
+.product-actions input{
+width:70px;
+padding:6px;
+text-align:center;
+
+border:2px solid #ddd;
+border-radius:8px;
+}
+
+
+/* =========================================================
+   BASKET SUMMARY
+   ========================================================= */
+
+.basket-summary{
+margin-top:30px;
+padding:20px;
+
+background:#fff;
+border:2px solid var(--box-border);
+border-radius:14px;
+max-width:400px;
+}
+
+.summary-row{
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
+font-weight:700;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:12px 20px;
+border-radius:12px;
+border:none;
+cursor:pointer;
+
+background:var(--accent);
+color:#fff;
+font-weight:800;
+text-decoration:none;
+}
+
+
+/* =========================================================
+   ACTION BAR
+   ========================================================= */
+
+.action-bar{
+margin-top:20px;
+display:flex;
+gap:15px;
+}
+
+
+/* =========================================================
+   EMPTY BASKET
+   ========================================================= */
+
+.empty-basket{
+background:#fff;
+border:2px dashed var(--box-border);
+padding:20px;
+border-radius:14px;
+text-align:center;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width:720px){
+
+.product-list{
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+}
+
+}

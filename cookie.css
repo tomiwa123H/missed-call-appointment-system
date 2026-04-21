@@ -1,0 +1,75 @@
+/*  PAGE BACKGROUND */
+body {
+    background: #d0d0cf; 
+    margin: 0;
+    font-family: var(--font-body);
+}
+
+/*  ADD  GREEN BRAND COLOURS */
+:root {
+    --brand-green: #6d8f23;       
+    --brand-green-light: #89a93b; 
+    --brand-dark: #1d1d1d;
+    --brand-grey: #2a2a2a;
+}
+
+/*  HERO */
+.choice-hero {
+    text-align: center;
+    padding: 90px 20px 20px;
+    color: var(--brand-dark);
+}
+
+/* CARDS */
+.login-choice-section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.choice-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 950px;
+}
+
+.login-card {
+    width: 360px;
+    background: #e0e0dd; 
+    padding: 40px 32px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    transition: transform .25s ease;
+}
+
+/*BUTTONS */
+
+.login-btn,
+.register-btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none ;
+
+    background: var(--brand-green) ;       
+    border: 2px solid var(--brand-green);
+    color: white ;
+
+    transition: 0.25s ease;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+    background: var(--brand-green-light) ;  
+    border-color: var(--brand-green-light);
+}
+
+/*  RESPONSIVE */
+@media (max-width: 650px) {
+    .login-card { width: 95%; }
+}

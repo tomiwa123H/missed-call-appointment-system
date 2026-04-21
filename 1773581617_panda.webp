@@ -1,0 +1,76 @@
+.accessibility-bar {
+  width: 100%;
+  background: var(--brand-yellow-green);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 6px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; /* lower than nav */
+}
+
+.accessibility-bar button {
+  background: white;
+  border: 1px solid #888;
+  padding: 4px 10px;
+  margin-left: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.accessibility-bar button:hover {
+  background: var(--brand-olive-light);
+}
+
+.access-ham {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* MATCH NAV RIGHT PADDING */
+  right: clamp(1rem, 4vw, 2rem);
+  top: clamp(0.25rem, 4vw, 2rem);
+  font-size: 2rem;
+  background: rgba(0,0,0,0.65);
+  color: white;
+
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Panel unchanged */
+.access-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100vh;
+  background: #fff;
+  padding: 20px;
+  border-left: 3px solid #222;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transform: translateX(100%);
+  transition: transform 0.35s ease-in-out;
+  overflow-y: hidden;
+  z-index: 15000;
+}
+.access-panel.open {
+  transform: translateX(0);
+  overflow-y: auto;
+}
+body.panel-open {
+  overflow: hidden;
+}
+
+.high-contrast,
+.high-contrast * {
+  background-color: black !important;
+  color: yellow !important;
+  border-color: yellow !important;
+}

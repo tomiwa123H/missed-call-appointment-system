@@ -1,0 +1,64 @@
+<?php
+declare(strict_types=1);
+session_start();
+
+if (
+    !isset($_SESSION['role']) ||
+    $_SESSION['role'] !== 'producer' ||
+    !isset($_SESSION['producer_id'])
+) {
+    header("Location: /PHP_Form/login_choice_form.php");
+    exit();
+}
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header("Location: /PHP_Form_Staff/producer_orders_list_form.php");
+    exit();
+}
+
+require_once __DIR__ . '/../PHP_Scripts/db_connection.php';
+$conn = get_database_connection();
+
+$order_id    = (int)($_POST['order_id'] ?? 0);
+$new_status  = trim($_POST['status'] ?? '');
+$producer_id = (int)$_SESSION['producer_id'];
+
+$allowed = ['placed', 'preparing', 'ready', 'completed'];
+
+if ($order_id <= 0 || !in_array($new_status, $allowed, true)) {
+    $_SESSION['flash_msg']  = 'Invalid request.';
+    $_SESSION['flash_type'] = 'err';
+    header("Location: /PHP_Form_Staff/producer_orders_list_form.php");
+    exit();
+}
+
+/* Verify the order contains at least one product by this producer */
+$stmt = $conn->prepare("
+    SELECT o.order_id FROM orders o
+    JOIN order_items oi ON oi.order_id = o.order_id
+    JOIN products p ON p.product_id = oi.product_id
+    WHERE o.order_id = ? AND p.producer_id = ?
+    LIMIT 1
+");
+$stmt->bind_param("ii", $order_id, $producer_id);
+$stmt->execute();
+$valid = $stmt->get_result()->fetch_assoc();
+$stmt->close();
+
+if (!$valid) {
+    $_SESSION['flash_msg']  = 'Order not found.';
+    $_SESSION['flash_type'] = 'err';
+    header("Location: /PHP_Form_Staff/producer_orders_list_form.php");
+    exit();
+}
+
+$stmt = $conn->prepare("UPDATE orders SET status=? WHERE order_id=?");
+$stmt->bind_param("si", $new_status, $order_id);
+$stmt->execute();
+$stmt->close();
+$conn->close();
+
+$_SESSION['flash_msg']  = "Order #$order_id updated to " . ucfirst($new_status) . ".";
+$_SESSION['flash_type'] = 'ok';
+header("Location: /PHP_Form_Staff/producer_orders_list_form.php");
+exit();
